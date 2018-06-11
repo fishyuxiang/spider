@@ -1,6 +1,6 @@
 class HtmlOutPut:
     def __init__(self):
-        self.datas = []  # 存放搜集的数据
+        self.datas = []  # 存放搜集的数据aa
 
     def collect_data(self, new_data):
         if (new_data is None):
