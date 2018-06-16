@@ -1,3 +1,5 @@
+import pymysql
+
 class HtmlOutPut:
     def __init__(self):
         self.datas = []  # 存放搜集的数据
@@ -8,13 +10,19 @@ class HtmlOutPut:
         self.datas.append(new_data)
 
     def output_html(self):
-        fout = open('output.log', 'w', encoding='utf8')  # 写入文件 防止中文乱码
-
+        conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='123456', db='Spiderdata',
+                               charset='utf8')
+        conn.autocommit(False)
+        cursor = conn.cursor()
         for data in self.datas:
+            #print(data['summary'])
+            sqlinsert = "insert into items(url,title,summary) values('%s','%s','%s')" % (data['url'], data['title'], data['summary'])
+            try:
+                cursor.execute(sqlinsert)
+                #print(cursor.rowcount)
+                conn.commit()
+            except Exception as e:
+                print("error:" + str(e))
+        conn.close()
 
-            fout.write('%s\n' % data['url'])
-            fout.write('%s\n' % data['title'])
-            fout.write('%s\n' % data['summary'])
-            fout.write('\n')
 
-        fout.close()
