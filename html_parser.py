@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import re
 from urllib import parse
 
-
 class HtmlParser:
     # page_url 基本url 需拼接部分
     def _get_new_urls(self, page_url, soup):
@@ -29,7 +28,6 @@ class HtmlParser:
         return red_data
 
         # new_url路径 html_context界面内容
-
     def parse(self, page_url, html_context):
         if (page_url is None or html_context is None):
             return
