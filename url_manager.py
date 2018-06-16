@@ -14,8 +14,7 @@ class UrlManager:
             # 既不在待爬取的url也不在已爬取的url中，是一个全新的url，因此将其添加到new_urls
             self.new_urls.add(root_url)
 
-            # 向管理器中添加批量新的url
-
+     # 向管理器中添加批量新的url
     def add_new_urls(self, urls):
         if (urls is None or len(urls) == 0):
             return
@@ -25,8 +24,8 @@ class UrlManager:
     # 判断是否有新的待爬取的url
     def has_new_url(self):
         return len(self.new_urls) != 0
-        # 获取一个待爬取的url
 
+    # 获取一个待爬取的url
     def get_new_url(self):
         new_url = self.new_urls.pop()
         self.old_urls.add(new_url)
