@@ -1,7 +1,6 @@
 # 创建类
 import url_manager, html_downloader, html_output, html_parser
 
-
 class spiderMain:
     # 构造函数 初始化
     def __init__(self):
@@ -26,17 +25,11 @@ class spiderMain:
                 self.urls.add_new_urls(new_urls)
                 self.output.collect_data(new_data)
                 # 爬一千个界面
-                if (count == 200):
+                if (count == 1):
                     break
                 count += 1
             except:
                 print("craw faile")
         self.output.output_html()
 
-    # 创建main方法
 
-
-if __name__ == "__main__":
-    root_url = "http://baike.baidu.com/item/Python"
-    obj_spider = spiderMain()
-    obj_spider.craw(root_url)
