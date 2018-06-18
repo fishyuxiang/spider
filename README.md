@@ -31,8 +31,8 @@
 ## 三.模块文件
 ### (1)模块架构
     架构图如下所示：
-    ![](https://github.com/fishyuxiang/spider/raw/master/images/struct.gif)
+    ![](https://github.com/fishyuxiang/spider/blob/master/images/struct.gif)
     
 ### (2)执行流程
     流程图如下所示：
-    ![](https://github.com/fishyuxiang/spider/raw/master/images/flow.gif)
+    ![](https://github.com/fishyuxiang/spider/blob/master/images/flow.gif)
