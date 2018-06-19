@@ -24,7 +24,7 @@ class spiderMain:
                 print(new_urls)
                 self.urls.add_new_urls(new_urls)
                 self.output.collect_data(new_data)
-                # 爬一千个界面
+                # 爬一千多个界面
                 if (count == 1050):
                     break
                 count += 1
