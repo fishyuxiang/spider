@@ -2,7 +2,7 @@
 
 ## 一.功能
 
-    抓取百度百科相关Python词条网页的标题和简介（1000条）数据存入mysql数据库,并能从数据库中读取，通过系统可视化界面展示。
+    抓取百度百科相关Python词条网页的标题和简介（1000条以上）数据存入mysql数据库,并能从数据库中读取，通过系统可视化界面展示。
 
 ## 二.配置
 ### (1)系统
@@ -23,7 +23,7 @@
     创建数据库：
     create database Spiderdata;
     创建表：
-    create table items(url varchar(255),title varchar(255) charset utf8,summary varchar(1000) charset utf8);
+    create table items(url varchar(255) not null primary key,title varchar(255) charset utf8,summary varchar(1000) charset utf8);
 
 ### (4)需要安装的第三方包
 
